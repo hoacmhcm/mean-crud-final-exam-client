@@ -18,8 +18,9 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
   }
 
+  //tạo một model employee để hứng lấy dữ liệu từ client
   model = new Employee();
-
+  //hàm thêm nhân viên
   addEmployee() {
     this.empService.addEmployee(this.model)
       .subscribe(() => this.goBack())

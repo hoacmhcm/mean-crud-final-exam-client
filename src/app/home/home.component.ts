@@ -15,13 +15,16 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getEmployees();
   }
+  //khai báo instance của Employee
   employees: Employee;
+  //hàm get employee về từ service
   getEmployees() {
     this.empService.getEmployees()
       .subscribe(employees => {
         this.employees = employees;
       })
   }
+  //hàm xóa employee
   deleteEmployee(id) {
     this.empService.deleteEmployee(id)
       .subscribe(() => {

@@ -1,9 +1,10 @@
-<table class="table table-bordered">
+<table class="table table-bordered center">
   <thead>
     <tr>
       <td>Name</td>
       <td>Position</td>
       <td>Department</td>
+      <td>Salary ($)</td>
       <td width="275" align="center">Action</td>
     </tr>
   </thead>
@@ -12,7 +13,8 @@
       <td>{{employee.name}}</td>
       <td>{{employee.position}}</td>
       <td>{{employee.department}}</td>
-      <td width="275">
+      <td>{{employee.salary}}</td>
+      <td width="275" class='center'>
         <a class="btn btn-success" routerLink="/update/{{employee._id}}">Edit</a>
         <a class="btn btn-danger" (click)="deleteEmployee(employee._id)">Delete</a>
         <a class="btn btn-info" routerLink="/index/{{employee._id}}">Detail</a>

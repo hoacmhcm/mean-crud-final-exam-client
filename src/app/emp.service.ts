@@ -9,8 +9,8 @@ export class EmpService {
         return this.http.get("http://localhost:3000/employees")
             .map(res => res.json());
     }
-    addEmployee(info) {
-        return this.http.post("http://localhost:3000/employees", info)
+    addEmployee(data) {
+        return this.http.post("http://localhost:3000/employees", data)
             .map(res => res.json());
     }
     getEmployee(id) {
@@ -21,8 +21,8 @@ export class EmpService {
         return this.http.delete("http://localhost:3000/employees/" + id)
             .map(res => res.json());
     }
-    updateEmployee(id, info) {
-        return this.http.put("http://localhost:3000/employees/" + id, info)
+    updateEmployee(id, data) {
+        return this.http.put("http://localhost:3000/employees/" + id, data)
             .map(res => res.json());
     }
 

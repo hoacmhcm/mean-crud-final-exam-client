@@ -18,7 +18,7 @@ export class IndexComponent implements OnInit {
   ngOnInit() {
     this.getEmployee();
   }
-
+  
   employee:Employee;
   getEmployee(){
     var id = this.route.snapshot.params['id'];
